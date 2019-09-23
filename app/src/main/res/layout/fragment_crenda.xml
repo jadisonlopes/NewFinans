@@ -1,0 +1,152 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Backgroud"
+    tools:context="newproject.com.br.newfinans.fragment.CRendaFragment"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            >
+
+            <TextView
+                android:text="Renda Adquirida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/idImageRenda"
+                android:layout_toRightOf="@+id/idImageRenda"
+                android:layout_toEndOf="@+id/idImageRenda"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="40dp"
+                android:textSize="@dimen/size_Titulo"
+                android:id="@+id/idTextRenda"
+                android:textColor="@color/TextIcon"
+                />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/renda"
+                android:id="@+id/idImageRenda"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/margem_TopPadrao"
+                />
+
+            <TextView
+                android:text="Descrição"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/idTextRDescricao"
+                android:layout_marginTop="@dimen/margem_TopPadrao"
+                android:layout_below="@+id/idImageRenda"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/TextViewer"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/altura_EditTex"
+                android:paddingLeft="@dimen/paddingLef_EditText"
+                android:textColor="@color/TextEdit"
+                android:theme="@style/EditeText"
+                android:id="@+id/idEditRDescricao"
+                android:layout_below="@+id/idTextRDescricao"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:hint="Salario"
+                android:textColorHint="@color/Hint"
+                android:inputType="text"
+                android:maxLength="@integer/maxLengthEdit"
+                />
+
+            <TextView
+                android:text="Valor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/idTextValor"
+                android:layout_marginTop="@dimen/margem_TopPadrao"
+                android:layout_below="@+id/idEditRDescricao"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/TextViewer"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/TextEdit"
+                android:theme="@style/EditeText"
+                android:paddingLeft="@dimen/paddingLef_EditText"
+                android:id="@+id/idEditValor"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:inputType="numberDecimal"
+                android:hint="@string/HintValor"
+                android:textSize="@dimen/size_Numeric"
+                android:textColorHint="@color/Hint"
+                android:layout_below="@+id/idTextValor"
+                />
+
+            <TextView
+                android:text="Data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/idTextData"
+                android:layout_marginTop="@dimen/margem_TopPadrao"
+                android:layout_below="@+id/idEditValor"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/TextViewer"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/altura_EditTex"
+                android:background="@drawable/calendar"
+                android:layout_below="@+id/idTextData"
+                android:id="@+id/idRCalendar"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/altura_EditTex"
+                android:textColor="@color/TextEdit"
+                android:theme="@style/EditeText"
+                android:paddingLeft="@dimen/paddingLef_EditText"
+                android:inputType="date"
+                android:maxLength="10"
+                android:id="@+id/idEditData"
+                android:layout_below="@+id/idTextData"
+                android:layout_toRightOf="@+id/idRCalendar"
+                android:hint="@string/HintData"
+                android:textColorHint="@color/Hint"
+                />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/gravar"
+                android:id="@+id/idImageGravar"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/idEditData"
+                android:layout_marginBottom="@dimen/margem_BottonPadrao"
+                />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>

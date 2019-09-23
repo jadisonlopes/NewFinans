@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margem_TopPadrao"
+    >
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:id="@+id/idRRData"
+        android:textColor="@color/TextData"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="7"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:id="@+id/idRRDescricao"
+        android:textColor="@color/TextIcon"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:gravity="end"
+        android:id="@+id/idRRValor"
+        android:textColor="@color/TextValorPositivo"
+        />
+
+</LinearLayout>

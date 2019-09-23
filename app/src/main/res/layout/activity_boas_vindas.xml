@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_boas_vindas"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/BoasVindas"
+tools:context="newproject.com.br.newfinans.activity.BoasVindasActivity">
+
+<ImageView
+    android:id="@+id/ImageLogo"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:background="@drawable/iconfinans"
+    android:layout_gravity="center" />
+
+</FrameLayout>

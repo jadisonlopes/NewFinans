@@ -1,0 +1,115 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Backgroud"
+    tools:context="newproject.com.br.newfinans.fragment.CFonteDespesaFragment"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+            <TextView
+                android:text="Fonte de Despesa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/idImageFonteDespesas"
+                android:layout_toRightOf="@+id/idImageFonteDespesas"
+                android:layout_toEndOf="@+id/idImageFonteDespesas"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="40dp"
+                android:textSize="@dimen/size_Titulo"
+                android:textColor="@color/TextIcon"
+                android:id="@+id/idTextFTitulo"
+                />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/fonte_despesa"
+                android:id="@+id/idImageFonteDespesas"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/toolbar"
+                android:layout_marginTop="@dimen/margem_TopPadrao"
+                />
+
+            <TextView
+                android:text="Descrição"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/idTextFDDescricao"
+                android:layout_marginTop="@dimen/margem_TopPadrao"
+                android:layout_below="@+id/idImageFonteDespesas"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/TextViewer"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/altura_EditTex"
+                android:textColor="@color/TextEdit"
+                android:theme="@style/EditeText"
+                android:paddingLeft="@dimen/paddingLef_EditText"
+                android:id="@+id/idEditFDDescricao"
+                android:layout_below="@+id/idTextFDDescricao"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColorHint="@color/Hint"
+                android:hint="Maria ou João"
+                android:inputType="text"
+                android:maxLength="@integer/maxLengthEdit"
+                />
+
+            <TextView
+                android:text="Observação"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/idTextFDObs"
+                android:layout_marginTop="@dimen/margem_TopPadrao"
+                android:layout_below="@+id/idEditFDDescricao"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/TextViewer"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/altura_EditTex"
+                android:textColor="@color/TextEdit"
+                android:theme="@style/EditeText"
+                android:paddingLeft="@dimen/paddingLef_EditText"
+                android:id="@+id/idEditFDObs"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/idTextFDObs"
+                android:inputType="text"
+                android:maxLength="@integer/maxLengthEdit"
+                />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/gravar"
+                android:id="@+id/idImageGravar"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/idEditFDObs"
+                android:layout_marginBottom="@dimen/margem_BottonPadrao"
+                />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>

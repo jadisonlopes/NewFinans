@@ -1,0 +1,123 @@
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/idFRenda"
+    android:background="@color/Backgroud"
+    tools:context="newproject.com.br.newfinans.fragment.PRendaFragment"
+    android:padding="@dimen/margem_TopPadrao"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/filtro"
+            android:id="@+id/idFiltrarR"
+            android:layout_above="@+id/idListRPesquisa"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:gravity="end"
+            android:id="@+id/idRTot"
+            android:textColor="@color/TextIcon"
+            android:layout_toRightOf="@+id/idFiltrarR"
+            android:layout_toEndOf="@+id/idFiltrarR"
+            android:paddingBottom="@dimen/margem_TopPadrao"
+            />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/idListRPesquisa"
+            android:layout_below="@id/idRTot"
+            android:background="@drawable/bordas_white_fd"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idLayoutFiltroR"
+            android:background="@color/Backgroud"
+            android:visibility="gone"
+            android:elevation="@dimen/elevation"
+            >
+
+            <TextView
+                android:id="@+id/TextMes"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:gravity="start"
+                android:text="Mes"
+                android:textColor="@color/TextViewer"
+                />
+
+            <Spinner
+                android:id="@+id/idRSpinnerMes"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TextMes"
+                >
+            </Spinner>
+
+            <TextView
+                android:id="@+id/TextAno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ano"
+                android:textAlignment="textStart"
+                android:gravity="start"
+                android:layout_toRightOf="@+id/TextMes"
+                android:layout_toEndOf="@+id/TextMes"
+                android:textColor="@color/TextViewer"
+                />
+
+            <Spinner
+                android:id="@+id/idRSpinnerAno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TextAno"
+                android:layout_toRightOf="@+id/idRSpinnerMes"
+                android:layout_toEndOf="@+id/idRSpinnerMes"
+                >
+            </Spinner>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idRSpinnerAno"
+                android:paddingBottom="@dimen/margem_TopPadrao"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/filtrar"
+                    android:id="@+id/idRBtFiltar"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cancelar"
+                    android:id="@+id/idRBtFCancelar"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginRight="50dp" />
+
+            </FrameLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

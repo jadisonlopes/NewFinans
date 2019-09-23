@@ -1,0 +1,32 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/White</item>
+        <item name="colorPrimaryDark">@color/PrimaryDark</item>
+        <item name="colorAccent">@color/BoasVindas</item>
+    </style>
+
+    <style name="ComboBox" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/Primary</item>
+        <item name="colorPrimaryDark">@color/PrimaryDark</item>
+        <item name="colorAccent">@color/White</item>
+    </style>
+
+    <style name="EditeText" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/Primary</item>
+        <item name="colorPrimaryDark">@color/PrimaryDark</item>
+        <item name="colorAccent">@color/White</item>
+    </style>
+
+    <style name="ButtonAction" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorButtonNormal">@color/White</item>
+        <item name="colorControlHighlight">@color/ListView</item>
+        <item name="android:textColor">@color/BoasVindas</item>
+    </style>
+
+</resources>

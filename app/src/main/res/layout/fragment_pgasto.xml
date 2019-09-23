@@ -1,0 +1,290 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/idFGasto"
+    android:background="@color/Backgroud"
+    tools:context="newproject.com.br.newfinans.fragment.PGastoFragment"
+    android:padding="@dimen/margem_TopPadrao"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/filtro"
+            android:id="@+id/idFiltrarG"
+            android:layout_above="@+id/idListGPesquisa"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:gravity="end"
+            android:id="@+id/idGTot"
+            android:textColor="@color/TextIcon"
+            android:layout_toRightOf="@+id/idFiltrarG"
+            android:layout_toEndOf="@+id/idFiltrarG"
+            android:paddingBottom="@dimen/margem_TopPadrao"
+            />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/idListGPesquisa"
+            android:background="@drawable/bordas_white_fd"
+            android:layout_below="@+id/idGTot"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idLayoutFiltroG"
+            android:background="@color/Backgroud"
+            android:elevation="@dimen/elevation"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                    android:id="@+id/idTextDataIni"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Data Inicial"
+                    android:textAlignment="textStart"
+                    android:gravity="start"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/TextViewer"
+                    />
+
+                    <TextView
+                        android:id="@+id/idTextDataFim"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Data Final"
+                        android:textAlignment="textEnd"
+                        android:gravity="end"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/TextViewer"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/idGLDate1"
+                        android:layout_below="@+id/idTextDataIni">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/altura_EditTex"
+                            android:background="@drawable/calendar"
+                            android:id="@+id/idGImageCalendarIni"
+                            />
+
+                        <EditText
+                            android:id="@+id/idGEditDataIni"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/altura_EditTex"
+                            android:textColor="@color/TextEdit"
+                            android:theme="@style/EditeText"
+                            android:paddingLeft="@dimen/paddingLef_EditText"
+                            android:inputType="date"
+                            android:maxLength="10"
+                            android:hint="@string/HintData"
+                            android:textColorHint="@color/Hint"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/idGLDate2"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/idTextDataFim">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/altura_EditTex"
+                            android:background="@drawable/calendar"
+                            android:id="@+id/idGImageCalendarFim"
+                            />
+
+                        <EditText
+                            android:id="@+id/idGEditDataFim"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/altura_EditTex"
+                            android:hint="@string/HintData"
+                            android:inputType="date"
+                            android:maxLength="10"
+                            android:paddingLeft="@dimen/paddingLef_EditText"
+                            android:textColor="@color/TextEdit"
+                            android:textColorHint="@color/Hint"
+                            android:theme="@style/EditeText" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Mes"
+                    android:id="@+id/TextMes"
+                    android:textAlignment="textStart"
+                    android:gravity="start"
+                    android:visibility="gone"
+                    />
+    
+                <Spinner
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/idGSpinnerMes"
+                    android:layout_below="@+id/TextMes"
+                    android:paddingBottom="@dimen/margem_TopPadrao"
+                    android:visibility="gone"
+                    >
+                </Spinner>
+    
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ano"
+                    android:id="@+id/TextAno"
+                    android:gravity="start"
+                    android:textAlignment="textStart"
+                    android:layout_toRightOf="@+id/TextMes"
+                    android:layout_toEndOf="@+id/TextMes"
+                    android:visibility="gone"
+                    />
+    
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/idGSpinnerAno"
+                    android:layout_below="@+id/TextAno"
+                    android:layout_toRightOf="@+id/idGSpinnerMes"
+                    android:layout_toEndOf="@+id/idGSpinnerMes"
+                    android:paddingBottom="@dimen/margem_TopPadrao"
+                    android:visibility="gone"
+                    >
+                </Spinner>
+
+
+    
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Despesa"
+                    android:gravity="start"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/TextViewer"
+                    />
+    
+                <Spinner
+                    android:id="@+id/idGSpinnerDespesa"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_Spinner"
+                    android:paddingBottom="@dimen/margem_TopPadrao"
+                    android:background="@drawable/bordas_white2"
+                    >
+                </Spinner>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fonte de Despesa"
+                    android:gravity="start"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/TextViewer"
+                    />
+
+                <Spinner
+                    android:id="@+id/idGSpinnerFonteDespesa"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_Spinner"
+                    android:paddingBottom="@dimen/margem_TopPadrao"
+                    android:background="@drawable/bordas_white2"
+                    >
+                </Spinner>
+    
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Forma de Pagamento"
+                    android:gravity="start"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/TextViewer"
+                    />
+    
+                <Spinner
+                    android:id="@+id/idGSpinnerFormaPag"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_Spinner"
+                    android:paddingBottom="@dimen/margem_TopPadrao"
+                    android:background="@drawable/bordas_white2"
+                    >
+                </Spinner>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Descrição"
+                    android:gravity="start"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/TextViewer"
+                    />
+
+                <EditText
+                    android:id="@+id/idGEditPDescricao"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/altura_EditTex"
+                    android:textColor="@color/TextEdit"
+                    android:theme="@style/EditeText"
+                    android:paddingLeft="@dimen/paddingLef_EditText"
+                    android:hint="Viagem"
+                    android:inputType="text"
+                    />
+    
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/idGSpinnerFormaPag"
+                    android:paddingBottom="@dimen/margem_TopPadrao"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/filtrar"
+                        android:id="@+id/idGBtFiltar"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginLeft="50dp"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cancelar"
+                        android:id="@+id/idGBtFCancelar"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="50dp"
+                        android:layout_marginRight="50dp"
+                        />
+                </FrameLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,243 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Backgroud"
+    tools:context="newproject.com.br.newfinans.fragment.CGastoFragment"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            >
+
+            <TextView
+                android:text="Gasto Realizado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/idImageGastos"
+                android:layout_toRightOf="@+id/idImageGastos"
+                android:layout_toEndOf="@+id/idImageGastos"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="40dp"
+                android:textSize="@dimen/size_Titulo"
+                android:id="@+id/idTextGastos"
+                android:textColor="@color/TextIcon"
+                />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/gastos"
+                android:id="@+id/idImageGastos"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/margem_TopPadrao"
+                />
+
+            <LinearLayout
+                android:id="@+id/idLinear1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/idImageGastos">
+
+                <TextView
+                    android:id="@+id/idTextGDescricao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Descrição"
+                    android:layout_marginTop="@dimen/margem_TopPadrao"
+                    android:textColor="@color/TextViewer"
+                    />
+
+                <EditText
+                    android:id="@+id/idEditGDescricao"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/altura_EditTex"
+                    android:textColor="@color/TextEdit"
+                    android:theme="@style/EditeText"
+                    android:paddingLeft="@dimen/paddingLef_EditText"
+                    android:hint="Mercado"
+                    android:textColorHint="@color/Hint"
+                    android:inputType="text"
+                    android:maxLength="@integer/maxLengthEdit"
+                    />
+
+                <TextView
+                    android:id="@+id/idTextValor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Valor"
+                    android:layout_marginTop="@dimen/margem_TopPadrao"
+                    android:textColor="@color/TextViewer"
+                    />
+
+                <EditText
+                    android:id="@+id/idEditGValor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/TextEdit"
+                    android:theme="@style/EditeText"
+                    android:paddingLeft="@dimen/paddingLef_EditText"
+                    android:inputType="number"
+                    android:hint="@string/HintValor"
+                    android:textSize="@dimen/size_Numeric"
+                    android:textColorHint="@color/Hint"
+                    />
+
+                <TextView
+                    android:id="@+id/idTextData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data"
+                    android:layout_marginTop="@dimen/margem_TopPadrao"
+                    android:textColor="@color/TextViewer"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/idLinear2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/idLinear1">
+
+                    <ImageView
+                        android:id="@+id/idGCalendar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/altura_EditTex"
+                        android:background="@drawable/calendar"
+                        />
+
+                    <EditText
+                        android:id="@+id/idEditGData"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/altura_EditTex"
+                        android:textColor="@color/TextEdit"
+                        android:theme="@style/EditeText"
+                        android:paddingLeft="@dimen/paddingLef_EditText"
+                        android:inputType="date"
+                        android:maxLength="10"
+                        android:hint="@string/HintData"
+                        android:textColorHint="@color/Hint"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/idTextGDespesas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tipo de Despesa"
+                    android:layout_marginTop="@dimen/margem_TopPadrao"
+                    android:textColor="@color/TextViewer"
+                    />
+
+                <Spinner
+                    android:id="@+id/idSpDespesas"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_Spinner"
+                    android:background="@drawable/bordas_white2"
+                    />
+
+                <TextView
+                    android:id="@+id/idTextGFonteDespesa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fonte de Despesa"
+                    android:layout_marginTop="@dimen/margem_TopPadrao"
+                    android:textColor="@color/TextViewer"
+                    />
+
+                <Spinner
+                    android:id="@+id/idSpFonteDespesa"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_Spinner"
+                    android:background="@drawable/bordas_white2"
+                    />
+
+                <Button
+                    android:id="@+id/idGBtInserir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="INSERIR PAGAMENTO"
+                    android:textSize="15sp"
+                    android:visibility="gone"/>
+
+                <ListView
+                    android:id="@+id/idGListPagamento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/bordas_orangebottom"
+                    android:divider="@color/Backgroud"
+                    android:dividerHeight="1dp"
+                    android:visibility="gone">
+                </ListView>
+
+                <TextView
+                    android:id="@+id/idTextGFormaPag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Forma de Pagamento"
+                    android:layout_marginTop="@dimen/margem_TopPadrao"
+                    android:textColor="@color/TextViewer"
+                    />
+
+                <Spinner
+                    android:id="@+id/idSpFormaPag"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_Spinner"
+                    android:background="@drawable/bordas_white2"
+                    />
+
+                <TextView
+                    android:id="@+id/idTextNumParc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Numero de Parcelas"
+                    android:layout_marginTop="@dimen/margem_TopPadrao"
+                    android:textColor="@color/TextViewer"
+                    android:visibility="gone"
+                    />
+
+                <EditText
+                    android:id="@+id/idEditNumParc"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/altura_EditTex"
+                    android:textColor="@color/TextEdit"
+                    android:theme="@style/EditeText"
+                    android:paddingLeft="@dimen/paddingLef_EditText"
+                    android:inputType="numberSigned"
+                    android:maxLength="2"
+                    android:visibility="gone"
+                    android:hint="1"
+                    android:textColorHint="@color/Hint"
+                    />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/idImageGravar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/gravar"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/idLinear1"
+                android:layout_marginBottom="@dimen/margem_BottonPadrao"
+                />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>

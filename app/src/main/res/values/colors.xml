@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Primary">#000000</color>
+    <color name="PrimaryDark">#000000</color>
+    <color name="Accent">#FFFFFF</color>
+
+    <color name="ToolbarPrincipal">#ffffff</color>
+    <color name="White">#FAFAFA</color>
+    <color name="White2">#e2ffffff</color>
+    <color name="White3">#28ffffff</color>
+    <color name="SilverWhite">#757575</color>
+    <color name="BoasVindas">#ffa726</color>
+    <!--<color name="Teste">#eaffe7c4</color>-->
+
+    <color name="Backgroud">#ffa726</color>
+    <color name="Cursor">#ffffff</color>
+    <color name="ListView">#FFD180</color>
+    <color name="ListViewWhite">#f7fdfdfd</color>
+    <color name="TextData">#ef494949</color>
+    <color name="TextSilver">#d0757575</color>
+    <color name="TextIcon">#212121</color>
+    <color name="TextValorPositivo">#0cbf4e</color>
+    <color name="TextValorNegativo">#da2525</color>
+    <color name="Hint">#FFD180</color>
+    <color name="TextViewer">#212121</color>
+    <color name="TextPrincipal">#212121</color>
+    <!--<color name="Edit">#ffa726</color>-->
+    <color name="Edit">#00ffffff</color>
+    <color name="TextEdit">#000000</color>
+    <color name="Silver">#f5f5f5</color>
+    <color name="swip_1">#00C853</color>
+    <color name="swip_2">#D50000</color>
+    <color name="swip_3">#2962FF</color>
+
+
+</resources>

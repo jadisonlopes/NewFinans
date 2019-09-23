@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="newproject.com.br.newfinans.activity.HomeActivity"
+    android:background="@color/Backgroud"
+    >
+
+    <include
+        layout="@layout/activity_toolbar"
+        android:id="@+id/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:paddingBottom="60dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <Button
+                android:text="Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp"
+                android:id="@+id/button"
+                android:visibility="gone"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Backgroud"
+                android:padding="@dimen/paddingPadrao"
+                android:id="@+id/RelativeHome"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bordas_white"
+                    >
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:layout_width="210dp"
+                        android:layout_height="210dp"
+                        android:id="@+id/idPieChartHSaldo"
+                        android:visibility="visible"
+                        >
+
+                    </com.github.mikephil.charting.charts.PieChart>
+
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="210dp"
+                        android:id="@+id/idTextPorcent"
+                        android:textColor="#2ECC71"
+                        android:visibility="visible"
+                        android:textSize="50dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Competência"
+                        android:id="@+id/idTextCompentencia"
+                        android:layout_toLeftOf="@+id/idFiltrarH"
+                        android:layout_toStartOf="@+id/idFiltrarH"
+                        android:paddingTop="7dp"
+                        android:paddingRight="10dp"
+                        android:textStyle="bold"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/filtro"
+                        android:id="@+id/idFiltrarH"
+                        android:layout_alignParentRight="true"
+                        />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="174dp"
+                        android:id="@+id/FrameText1"
+                        android:layout_below="@+id/idFiltrarH"
+                        android:paddingBottom="26dp"
+                        android:layout_toRightOf="@+id/idPieChartHSaldo"
+                        android:layout_toEndOf="@+id/idPieChartHSaldo"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center_vertical"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/TextEdit"
+                                    android:text="Renda:"
+                                    android:textSize="@dimen/size_TextTot"
+                                    />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/size_TextTotValue"
+                                    android:id="@+id/idTextTotRenda"
+                                    android:paddingBottom="10dp"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/TextEdit"
+                                    android:text="Gastos:"
+                                    android:textSize="@dimen/size_TextTot"
+                                    />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/size_TextTotValue"
+                                    android:id="@+id/idTextTotGasto"
+                                    android:paddingBottom="10dp"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:textColor="@color/TextEdit"
+                                    android:text="Saldo:"
+                                    android:textSize="@dimen/size_TextTot"
+                                    />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="@dimen/size_TextTotValue"
+                                    android:id="@+id/idTextTotSaldo"
+                                    android:paddingBottom="10dp"
+                                    />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/idHBtVerDetalhes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/verdetalhes"
+                android:layout_below="@+id/RelativeHome"
+                android:layout_marginStart="@dimen/paddingPadrao"
+                android:layout_marginLeft="@dimen/paddingPadrao" />
+
+            <ScrollView
+                android:id="@+id/idScrolViewDetalhe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idHBtVerDetalhes"
+                android:visibility="visible"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/FrameText2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/FrameText2"
+                        android:paddingTop="@dimen/paddingPadrao"
+                        android:paddingLeft="@dimen/paddingPadrao"
+                        android:paddingRight="@dimen/paddingPadrao"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bordas_whitetop"
+                            android:textColor="@color/BoasVindas"
+                            android:text="FORMAS DE PAGAMENTO"
+                            android:textAlignment="center"
+                            android:textSize="16dp"
+                            />
+
+                        <ListView
+                            android:id="@+id/idListGraficoFormaPag"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/bordas_orangebottom"
+                            android:divider="@color/Backgroud"
+                            android:dividerHeight="1dp"
+                            >
+
+                        </ListView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/FrameText3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/paddingPadrao"
+                        android:paddingLeft="@dimen/paddingPadrao"
+                        android:paddingRight="@dimen/paddingPadrao"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bordas_whitetop"
+                            android:textColor="@color/BoasVindas"
+                            android:text="TIPOS DE DESPESA"
+                            android:textAlignment="center"
+                            android:textSize="16dp"
+                            />
+
+                        <ListView
+                            android:id="@+id/idListGraficoDespesa"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/bordas_orangebottom"
+                            android:divider="@color/Backgroud"
+                            android:dividerHeight="1dp"
+                            >
+
+                        </ListView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/FrameText4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/paddingPadrao"
+                        android:paddingLeft="@dimen/paddingPadrao"
+                        android:paddingRight="@dimen/paddingPadrao"
+                        tools:ignore="DuplicateIds">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bordas_whitetop"
+                            android:textColor="@color/BoasVindas"
+                            android:text="FONTE DE DESPESA"
+                            android:textAlignment="center"
+                            android:textSize="16dp"
+                            />
+
+                        <ListView
+                            android:id="@+id/idListGraficoFonteDespesa"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/bordas_orangebottom"
+                            android:divider="@color/Backgroud"
+                            android:dividerHeight="1dp"
+                            >
+
+                        </ListView>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idLayoutFiltroH"
+        android:background="@color/Backgroud"
+        android:visibility="gone"
+        android:elevation="@dimen/elevation"
+        >
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Mes"
+            android:id="@+id/TextMes"
+            android:textAlignment="textStart"
+            android:gravity="start"
+            android:textColor="@color/TextViewer"
+            />
+
+        <Spinner
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/idHSpinnerMes"
+            android:layout_below="@+id/TextMes"
+            >
+        </Spinner>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ano"
+            android:id="@+id/TextAno"
+            android:textAlignment="textStart"
+            android:layout_toRightOf="@+id/TextMes"
+            android:layout_toEndOf="@+id/TextMes"
+            android:gravity="start"
+            android:textColor="@color/TextViewer"
+            />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idHSpinnerAno"
+            android:layout_below="@id/TextAno"
+            android:layout_toRightOf="@+id/idHSpinnerMes"
+            android:layout_toEndOf="@+id/idHSpinnerMes"
+            >
+        </Spinner>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idHSpinnerAno"
+            android:paddingBottom="@dimen/margem_TopPadrao"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/filtrar"
+                android:id="@+id/idHBtFiltar"
+                android:layout_gravity="start"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cancelar"
+                android:id="@+id/idHBtFCancelar"
+                android:layout_gravity="end"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/White"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal|center_vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/icodespesas"
+                    android:id="@+id/idIconDespesas"
+                    android:paddingBottom="-5dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Tipo Des"
+                    android:textStyle="normal"
+                    android:textColor="#4D4D4D"
+                    />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="@dimen/size_ViewButton"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/icofonte_despesa"
+                    android:id="@+id/idIconFonteDespesa"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Fonte Des"
+                    android:textStyle="normal"
+                    android:textColor="#4D4D4D"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/size_ViewButton"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/icorenda"
+                    android:id="@+id/idIconRenda"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Rendas"
+                    android:textStyle="normal"
+                    android:textColor="#4D4D4D"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/size_ViewButton"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/icogastos"
+                    android:id="@+id/idIconGastos"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Gastos"
+                    android:textStyle="normal"
+                    android:textColor="#4D4D4D"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/size_ViewButton"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/icoformapag"
+                    android:id="@+id/idIconFormasPag"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Tipo Pag"
+                    android:textStyle="normal"
+                    android:textColor="#4D4D4D"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>

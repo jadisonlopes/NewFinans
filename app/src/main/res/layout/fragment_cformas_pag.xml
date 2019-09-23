@@ -1,0 +1,238 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Backgroud"
+    tools:context="newproject.com.br.newfinans.fragment.CFormasPagFragment"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            >
+
+            <TextView
+                android:text="Formas de Pagamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/idImageFormasPag"
+                android:layout_toRightOf="@+id/idImageFormasPag"
+                android:layout_toEndOf="@+id/idImageFormasPag"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="40dp"
+                android:textSize="@dimen/size_Titulo"
+                android:id="@+id/idTextFormasPag"
+                android:textColor="@color/TextIcon"
+                />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/formapag"
+                android:id="@+id/idImageFormasPag"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/toolbar"
+                />
+
+            <TextView
+                android:text="Descrição"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/idTextFDescricao"
+                android:layout_marginTop="@dimen/margem_TopPadrao"
+                android:layout_below="@+id/idImageFormasPag"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/TextViewer"
+                />
+
+            <EditText
+                android:id="@+id/idEditFDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/altura_EditTex"
+                android:textColor="@color/TextEdit"
+                android:theme="@style/EditeText"
+                android:paddingLeft="@dimen/paddingLef_EditText"
+                android:layout_below="@+id/idTextFDescricao"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:hint="Cartão 5500"
+                android:textColorHint="@color/Hint"
+                android:inputType="text"
+                android:maxLength="@integer/maxLengthEdit"
+                />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/idEditFDescricao"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/idRgUm">
+
+                <RadioButton
+                    android:text="À Vista  "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/ComboBox"
+                    android:textSize="@dimen/size_RadioButton"
+                    android:layout_marginTop="@dimen/margem_TopPadrao"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/idRbAvista"
+                    />
+
+                <RadioButton
+                    android:text="Cartão  "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/ComboBox"
+                    android:textSize="@dimen/size_RadioButton"
+                    android:layout_marginTop="@dimen/margem_TopPadrao"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/idRbCartao"
+                    />
+
+                <RadioButton
+                    android:text="Cheque  "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/ComboBox"
+                    android:textSize="@dimen/size_RadioButton"
+                    android:layout_marginTop="@dimen/margem_TopPadrao"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/idRbCheque"
+                    />
+
+                <RadioButton
+                    android:text="Outros  "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/ComboBox"
+                    android:textSize="@dimen/size_RadioButton"
+                    android:layout_marginTop="@dimen/margem_TopPadrao"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/idRbOutros"
+                    />
+
+                <CheckBox
+                    android:text="Parcela"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/ComboBox"
+                    android:textSize="@dimen/size_RadioButton"
+                    android:id="@+id/idCbParcela"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="@dimen/margem_TopPadrao"
+                    android:layout_weight="1"
+                    />
+
+            </RadioGroup>
+
+            <TextView
+                android:text="Melhor dia para compra"
+                android:textColor="@color/TextViewer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/idTextDataComp"
+                android:layout_below="@+id/idRgUm"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:visibility="gone"
+                />
+
+            <EditText
+                android:id="@+id/idEditDataComp"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/altura_EditTex"
+                android:textColor="@color/TextEdit"
+                android:theme="@style/EditeText"
+                android:paddingLeft="@dimen/paddingLef_EditText"
+                android:inputType="numberSigned"
+                android:maxLength="2"
+                android:layout_below="@+id/idTextDataComp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:visibility="gone"
+                android:hint="01"
+                android:textColorHint="@color/Hint"
+                />
+
+            <TextView
+                android:id="@+id/idTextDataVenc"
+                android:text="Vencimento"
+                android:textColor="@color/TextViewer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idRgUm"
+                android:paddingLeft="30dp"
+                android:layout_toRightOf="@id/idTextDataComp"
+                android:visibility="gone"
+                />
+
+            <EditText
+                android:id="@+id/idEditDataVenc"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/altura_EditTex"
+                android:textColor="@color/TextEdit"
+                android:theme="@style/EditeText"
+                android:inputType="numberSigned"
+                android:maxLength="2"
+                android:layout_below="@+id/idTextDataVenc"
+                android:paddingLeft="30dp"
+                android:layout_toRightOf="@id/idTextDataComp"
+                android:visibility="gone"
+                android:hint="01"
+                android:textColorHint="@color/Hint"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idEditDataComp"
+                android:id="@+id/idFrameImageForma"
+                >
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/idImageTipoPag"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    />
+
+            </FrameLayout>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/gravar"
+                android:id="@+id/idImageGravar"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/idFrameImageForma"
+                android:layout_marginBottom="@dimen/margem_BottonPadrao"
+                />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>
